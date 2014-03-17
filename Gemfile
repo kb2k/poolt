@@ -39,7 +39,7 @@ gem 'capistrano', group: :development
 gem 'slim-rails'
 
 # Backbone
-gem 'backbone-rails'
+gem 'rails-backbone'
 
 # Devise
 gem 'devise'
