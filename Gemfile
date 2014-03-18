@@ -52,3 +52,6 @@ end
 
 # Bootstrap
 gem 'bootstrap-sass'
+
+# Gon
+gem 'gon'

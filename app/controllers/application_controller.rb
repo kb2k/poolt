@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
 
   def index
 
+    gon.currentUser = current_user
+
   end
 
 end
