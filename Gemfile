@@ -41,9 +41,6 @@ gem 'slim-rails'
 # Backbone
 gem 'rails-backbone'
 
-# Devise
-gem 'devise'
-
 # Testing
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
