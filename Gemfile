@@ -52,3 +52,6 @@ gem 'bootstrap-sass'
 
 # Gon
 gem 'gon'
+
+# Sorcery
+gem 'sorcery'
