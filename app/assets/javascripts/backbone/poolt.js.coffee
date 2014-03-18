@@ -5,7 +5,14 @@
 #= require_tree ./routers
 
 window.Poolt =
+
   Models: {}
   Collections: {}
   Routers: {}
   Views: {}
+
+  initialize: ->
+    new Poolt.Routers.UsersRouter
+    new Poolt.Routers.ProjectsRouter
+
+    Backbone.history.start()
