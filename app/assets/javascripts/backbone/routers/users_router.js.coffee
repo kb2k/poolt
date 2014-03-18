@@ -6,7 +6,7 @@ class Poolt.Routers.UsersRouter extends Backbone.Router
 
   routes:
     "users/new"      : "newUser"
-    "users/index"    : "index"
+    "users"           : "index"
     "users/:id/edit" : "edit"
     "users/:id"      : "show"
     "users/.*"        : "index"

@@ -16,3 +16,9 @@ window.Poolt =
     new Poolt.Routers.ProjectsRouter
 
     Backbone.history.start()
+
+    @tabsView()
+
+  tabsView: ->
+    view = new Poolt.Views.TabsView
+    $("#tabs").html(view.render().el)
