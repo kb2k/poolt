@@ -10,5 +10,47 @@
  *
  *= require_self
  *= require bootstrap
- *= require_tree .
  */
+
+$border: 1px solid #d6d6d6
+
+#app
+  width: 1000px
+  margin: 0 auto
+  margin:
+    top: 20px
+
+  #top-menu
+    border: $border
+    height: 50px
+    line-height: 48px
+
+    .brand
+      width: 150px
+      padding:
+        left: 30px
+      border-right: $border
+      font:
+        size: 30px
+
+  #main-menu
+    border:
+      left: $border
+      right: $border
+      bottom: $border
+    height: 500px
+
+    .left
+      float: left
+      width: 150px
+      height: 100%
+      border:
+        right: $border
+
+    .right
+      float: right
+      width: 840px
+
+      #content
+        padding:
+          left: 20px
