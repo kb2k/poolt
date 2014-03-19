@@ -37,6 +37,7 @@ gem 'capistrano', group: :development
 
 # Slim
 gem 'slim-rails'
+gem 'skim'
 
 # Backbone
 gem 'rails-backbone'
