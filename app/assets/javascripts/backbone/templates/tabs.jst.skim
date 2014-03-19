@@ -3,6 +3,6 @@
   a href="#/projects" Проекты
   a href="#/tasks" Задачи
 
-  a.right Выход
+  a.right href="#/logout" Выход
 - else
-  a.right Вход
+  a.right href="#/login" Вход

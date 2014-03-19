@@ -14,6 +14,7 @@ window.Poolt =
   initialize: ->
     new Poolt.Routers.UsersRouter
     new Poolt.Routers.ProjectsRouter
+    new Poolt.Routers.SessionsRouter
 
     Backbone.history.start()
 
