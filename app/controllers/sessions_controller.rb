@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+
+  respond_to :json
+
   def create
     @user = login params[:email], params[:password]
     render status: 422 unless @user
@@ -7,4 +10,5 @@ class SessionsController < ApplicationController
   def destroy
     logout
   end
+
 end

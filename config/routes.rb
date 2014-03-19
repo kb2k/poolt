@@ -1,8 +1,7 @@
 Poolt::Application.routes.draw do
 
-  get "sessions/create"
-  get "sessions/index"
   resources :projects
+  resources :sessions
 
   root to: 'application#index'
 

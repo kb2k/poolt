@@ -4,7 +4,7 @@ class Poolt.Views.Sessions.NewView extends Backbone.View
   template: JST["backbone/templates/sessions/new"]
 
   events:
-    "submit #new-sessions": "save"
+    "submit #new-session": "save"
 
   constructor: (options) ->
     super(options)
@@ -21,11 +21,11 @@ class Poolt.Views.Sessions.NewView extends Backbone.View
     @model.unset("errors")
 
     @collection.create(@model.toJSON(),
-      success: (sessions) =>
-        @model = sessions
+      success: (session) =>
+        @model = session
         window.location.hash = "/#{@model.id}"
 
-      error: (sessions, jqXHR) =>
+      error: (session, jqXHR) =>
         @model.set({errors: $.parseJSON(jqXHR.responseText)})
     )
 

@@ -1,0 +1,11 @@
+h1 Вход
+
+form#new-session name="session"
+  .field
+    label for="email"  email:
+    input#email name="email" type="text" value=@email
+  .field
+    label for="password"  password:
+    input#password name="password" type="text" value=@password
+  .actions
+    input type="submit" value="Войти" /
