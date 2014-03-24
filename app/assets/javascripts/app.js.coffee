@@ -13,10 +13,10 @@ window.App =
   Vent: _.clone(Backbone.Events)
 
   initialize: ->
-    window.contentView = new App.Views.Content
+    App.contentView = new App.Views.Content
 
     # Current User
-    App.currentUser = new App.Models.CurrentUser({id: 1})
+    App.currentUser = new App.Models.CurrentUser(gon.currentUser)
 
     # Routers
     new App.Routers.Main

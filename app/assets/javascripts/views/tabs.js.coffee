@@ -6,5 +6,7 @@ class App.Views.Tabs extends Backbone.View
     @listenTo App.Vent, 'tabs:rerender', @render
 
   render : ->
-    $(@el).html(@template({currentUser: gon.currentUser}))
+    console.log App.currentUser
+
+    $(@el).html(@template({currentUser: App.currentUser}))
     @

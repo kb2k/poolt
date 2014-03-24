@@ -11,7 +11,7 @@ class App.Views.Sessions.New extends Backbone.View
     @listenTo @model, "sync", @triggerLoggenIn
 
   triggerLoggenIn: ->
-    App.Vent.trigger "user:logged_in", @model.get('id'), @model.get('username')
+    App.Vent.trigger "user:logged_in", @model.toJSON()
 
   events:
     "click button": "login"

@@ -4,4 +4,4 @@ class App.Routers.Main extends Backbone.Router
     '': 'welcome'
 
   welcome: ->
-    contentView.swap(new App.Views.Welcome)
+    App.contentView.swap(new App.Views.Welcome)

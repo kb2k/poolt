@@ -9,7 +9,7 @@ class App.Routers.Sessions extends Backbone.Router
 
   login: ->
     @view = new App.Views.Sessions.New(collection: @sessions)
-    contentView.swap(@view)
+    App.contentView.swap(@view)
 
   logout: ->
     App.Vent.trigger 'user:logged_out'
