@@ -9,9 +9,17 @@ window.App =
   Models: {}
   Collections: {}
   Views: {}
-  Routes: {}
+  Routers: {}
 
   initialize: ->
+    window.contentView = new App.Views.Content
+
+    # Routers
+    new App.Routers.Main
+    new App.Routers.Sessions
+
+    Backbone.history.start()
+
     @tabsView()
 
   tabsView: ->
