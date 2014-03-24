@@ -4,8 +4,12 @@ class App.Routers.Sessions extends Backbone.Router
     @sessions = new App.Collections.SessionsCollection()
 
   routes:
-    "login": "newSession"
+    "login": "login"
+    "logout": "logout"
 
-  newSession: ->
+  login: ->
     @view = new App.Views.Sessions.New(collection: @sessions)
     contentView.swap(@view)
+
+  logout: ->
+    App.Vent.trigger 'user:logged_out'

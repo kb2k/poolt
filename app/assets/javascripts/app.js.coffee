@@ -15,6 +15,9 @@ window.App =
   initialize: ->
     window.contentView = new App.Views.Content
 
+    # Current User
+    App.currentUser = new App.Models.CurrentUser({id: 1})
+
     # Routers
     new App.Routers.Main
     new App.Routers.Sessions
