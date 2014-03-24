@@ -1,0 +1,8 @@
+- if @currentUser
+  a href="#/users" Сотрудники
+  a href="#/projects" Проекты
+  a href="#/tasks" Задачи
+
+  a.right href="#/logout" Выход
+- else
+  a.right href="#/login" Вход
