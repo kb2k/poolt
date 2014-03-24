@@ -1,11 +1,20 @@
-h1 Вход
+.page-header
+  h1 Вход
 
-form#new-session name="session"
-  .field
-    label for="email"  email:
-    input#email name="email" type="text" value=@email
-  .field
-    label for="password"  password:
-    input#password name="password" type="text" value=@password
-  .actions
-    input type="submit" value="Войти" /
+.alert.alert-danger.alert-dismissable style="display: none;"
+
+form#new-session.form-horizontal name="session"
+
+  .form-group
+    label.col-sm-2.control-label for="email" E-mail:
+    .col-sm-10
+      input#email.form-control name="email" type="text"
+
+  .form-group
+    label.col-sm-2.control-label for="password" Пароль:
+    .col-sm-10
+      input#password.form-control name="password" type="password"
+
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      button type="submit" class="btn btn-default" Войти

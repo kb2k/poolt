@@ -40,7 +40,7 @@ gem 'slim-rails'
 gem 'skim'
 
 # Backbone
-gem 'rails-backbone'
+gem 'backbone-rails'
 
 # Testing
 group :development, :test do

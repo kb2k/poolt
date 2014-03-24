@@ -4,35 +4,31 @@ class App.Views.Sessions.New extends Backbone.View
 
   template: JST["templates/sessions/new"]
 
-  events:
-    "submit #new-session": "save"
-
-  constructor: (options) ->
-    super(options)
+  initialize: ->
     @model = new @collection.model()
 
-    @model.bind("change:errors", () =>
-      this.render()
-    )
+    @listenTo @model, "error", @renderError
+    @listenTo @model, "sync", @triggerLoggenIn
 
-  save: (e) ->
+  triggerLoggenIn: ->
+    App.Vent.trigger "user:logged_in", @model.get('id'), @model.get('username')
+
+  events:
+    "click button": "login"
+
+  login: (e) ->
     e.preventDefault()
-    e.stopPropagation()
 
-    @model.unset("errors")
+    @$('.alert').hide()
 
-    @collection.create(@model.toJSON(),
-      success: (session) =>
-        @model = session
-        window.location.hash = "/#{@model.id}"
+    @model.set email: @$('#email').val()
+    @model.set password: @$('#password').val()
 
-      error: (session, jqXHR) =>
-        @model.set({errors: $.parseJSON(jqXHR.responseText)})
-    )
+    @model.save()
 
   render: ->
-    $(@el).html(@template(@model.toJSON() ))
+    $(@el).html(@template())
+    @
 
-    this.$("form").backboneLink(@model)
-
-    return this
+  renderError: ->
+    @$('.alert').html("Неверное имя пользователя или пароль").show()

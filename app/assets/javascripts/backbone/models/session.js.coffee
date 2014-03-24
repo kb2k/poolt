@@ -1,4 +1,5 @@
 class Poolt.Models.Session extends Backbone.Model
+
   paramRoot: 'session'
 
   defaults:

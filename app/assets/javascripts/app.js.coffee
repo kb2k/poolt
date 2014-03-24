@@ -10,6 +10,7 @@ window.App =
   Collections: {}
   Views: {}
   Routers: {}
+  Vent: _.clone(Backbone.Events)
 
   initialize: ->
     window.contentView = new App.Views.Content

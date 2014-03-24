@@ -1,7 +1,7 @@
 //= require jquery
 //= require underscore
 //= require backbone
-//= require backbone_rails_sync
-//= require backbone_datalink
+//= require bootstrap
 //= require skim
+//= require csrf_hack
 //= require app

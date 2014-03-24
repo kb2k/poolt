@@ -1,6 +1,7 @@
 class App.Models.Session extends Backbone.Model
 
   paramRoot: 'session'
+  urlRoot: '/sessions'
 
   defaults:
     email: null
