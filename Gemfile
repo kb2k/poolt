@@ -56,3 +56,6 @@ gem 'gon'
 
 # Sorcery
 gem 'sorcery'
+
+# ActiveAdmin
+gem 'activeadmin', github: 'gregbell/active_admin'
