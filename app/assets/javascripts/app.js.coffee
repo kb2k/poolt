@@ -14,6 +14,7 @@ window.App =
 
   initialize: ->
     App.contentView = new App.Views.Content
+    App.sideView = new App.Views.Side
 
     # Current User
     App.currentUser = new App.Models.CurrentUser(gon.currentUser)
